@@ -22,6 +22,7 @@ Partial Class SMSMessenger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SMSMessenger))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSend = New System.Windows.Forms.Button()
         Me.btnEnter = New System.Windows.Forms.Button()
@@ -86,8 +87,10 @@ Partial Class SMSMessenger
         Me.btnQ = New System.Windows.Forms.Button()
         Me.textDisplay = New System.Windows.Forms.Panel()
         Me.txtMessage = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Bar1 = New System.Windows.Forms.Panel()
+        Me.cmdClose = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        Me.Bar1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -153,9 +156,9 @@ Partial Class SMSMessenger
         Me.Panel1.Controls.Add(Me.btnSpec1)
         Me.Panel1.Controls.Add(Me.btnW)
         Me.Panel1.Controls.Add(Me.btnQ)
-        Me.Panel1.Location = New System.Drawing.Point(0, 286)
+        Me.Panel1.Location = New System.Drawing.Point(12, 286)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(640, 200)
+        Me.Panel1.Size = New System.Drawing.Size(616, 187)
         Me.Panel1.TabIndex = 0
         '
         'btnSend
@@ -164,7 +167,7 @@ Partial Class SMSMessenger
         Me.btnSend.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSend.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSend.Location = New System.Drawing.Point(546, 85)
+        Me.btnSend.Location = New System.Drawing.Point(535, 82)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(62, 29)
         Me.btnSend.TabIndex = 35
@@ -173,11 +176,11 @@ Partial Class SMSMessenger
         '
         'btnEnter
         '
-        Me.btnEnter.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnEnter.BackColor = System.Drawing.Color.Gainsboro
         Me.btnEnter.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEnter.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnter.Location = New System.Drawing.Point(535, 50)
+        Me.btnEnter.Location = New System.Drawing.Point(524, 47)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(73, 29)
         Me.btnEnter.TabIndex = 34
@@ -186,11 +189,11 @@ Partial Class SMSMessenger
         '
         'btnBckSpace
         '
-        Me.btnBckSpace.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnBckSpace.BackColor = System.Drawing.Color.Gainsboro
         Me.btnBckSpace.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBckSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBckSpace.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBckSpace.Location = New System.Drawing.Point(492, 15)
+        Me.btnBckSpace.Location = New System.Drawing.Point(481, 12)
         Me.btnBckSpace.Name = "btnBckSpace"
         Me.btnBckSpace.Size = New System.Drawing.Size(116, 29)
         Me.btnBckSpace.TabIndex = 33
@@ -203,7 +206,7 @@ Partial Class SMSMessenger
         Me.btnSpec14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec14.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec14.Location = New System.Drawing.Point(457, 15)
+        Me.btnSpec14.Location = New System.Drawing.Point(446, 12)
         Me.btnSpec14.Name = "btnSpec14"
         Me.btnSpec14.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec14.TabIndex = 32
@@ -216,7 +219,7 @@ Partial Class SMSMessenger
         Me.btnSpec11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec11.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec11.Location = New System.Drawing.Point(422, 15)
+        Me.btnSpec11.Location = New System.Drawing.Point(411, 12)
         Me.btnSpec11.Name = "btnSpec11"
         Me.btnSpec11.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec11.TabIndex = 31
@@ -229,7 +232,7 @@ Partial Class SMSMessenger
         Me.btnSpec12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec12.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec12.Location = New System.Drawing.Point(38, 15)
+        Me.btnSpec12.Location = New System.Drawing.Point(27, 12)
         Me.btnSpec12.Name = "btnSpec12"
         Me.btnSpec12.Size = New System.Drawing.Size(28, 29)
         Me.btnSpec12.TabIndex = 30
@@ -242,7 +245,7 @@ Partial Class SMSMessenger
         Me.Button49.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button49.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button49.Location = New System.Drawing.Point(387, 15)
+        Me.Button49.Location = New System.Drawing.Point(376, 12)
         Me.Button49.Name = "Button49"
         Me.Button49.Size = New System.Drawing.Size(29, 29)
         Me.Button49.TabIndex = 29
@@ -255,7 +258,7 @@ Partial Class SMSMessenger
         Me.Button50.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button50.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button50.Location = New System.Drawing.Point(352, 15)
+        Me.Button50.Location = New System.Drawing.Point(341, 12)
         Me.Button50.Name = "Button50"
         Me.Button50.Size = New System.Drawing.Size(29, 29)
         Me.Button50.TabIndex = 28
@@ -268,7 +271,7 @@ Partial Class SMSMessenger
         Me.Button51.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button51.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button51.Location = New System.Drawing.Point(317, 15)
+        Me.Button51.Location = New System.Drawing.Point(306, 12)
         Me.Button51.Name = "Button51"
         Me.Button51.Size = New System.Drawing.Size(29, 29)
         Me.Button51.TabIndex = 27
@@ -281,7 +284,7 @@ Partial Class SMSMessenger
         Me.Button52.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button52.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button52.Location = New System.Drawing.Point(282, 15)
+        Me.Button52.Location = New System.Drawing.Point(271, 12)
         Me.Button52.Name = "Button52"
         Me.Button52.Size = New System.Drawing.Size(29, 29)
         Me.Button52.TabIndex = 26
@@ -294,7 +297,7 @@ Partial Class SMSMessenger
         Me.Button53.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button53.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button53.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button53.Location = New System.Drawing.Point(247, 15)
+        Me.Button53.Location = New System.Drawing.Point(236, 12)
         Me.Button53.Name = "Button53"
         Me.Button53.Size = New System.Drawing.Size(29, 29)
         Me.Button53.TabIndex = 25
@@ -307,7 +310,7 @@ Partial Class SMSMessenger
         Me.Button54.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button54.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button54.Location = New System.Drawing.Point(212, 15)
+        Me.Button54.Location = New System.Drawing.Point(201, 12)
         Me.Button54.Name = "Button54"
         Me.Button54.Size = New System.Drawing.Size(29, 29)
         Me.Button54.TabIndex = 24
@@ -320,7 +323,7 @@ Partial Class SMSMessenger
         Me.Button55.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button55.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button55.Location = New System.Drawing.Point(177, 15)
+        Me.Button55.Location = New System.Drawing.Point(166, 12)
         Me.Button55.Name = "Button55"
         Me.Button55.Size = New System.Drawing.Size(29, 29)
         Me.Button55.TabIndex = 23
@@ -333,7 +336,7 @@ Partial Class SMSMessenger
         Me.Button56.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button56.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button56.Location = New System.Drawing.Point(142, 15)
+        Me.Button56.Location = New System.Drawing.Point(131, 12)
         Me.Button56.Name = "Button56"
         Me.Button56.Size = New System.Drawing.Size(29, 29)
         Me.Button56.TabIndex = 22
@@ -346,7 +349,7 @@ Partial Class SMSMessenger
         Me.Button57.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button57.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button57.Location = New System.Drawing.Point(107, 15)
+        Me.Button57.Location = New System.Drawing.Point(96, 12)
         Me.Button57.Name = "Button57"
         Me.Button57.Size = New System.Drawing.Size(29, 29)
         Me.Button57.TabIndex = 21
@@ -359,7 +362,7 @@ Partial Class SMSMessenger
         Me.Button58.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button58.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button58.Location = New System.Drawing.Point(72, 15)
+        Me.Button58.Location = New System.Drawing.Point(61, 12)
         Me.Button58.Name = "Button58"
         Me.Button58.Size = New System.Drawing.Size(29, 29)
         Me.Button58.TabIndex = 20
@@ -368,11 +371,11 @@ Partial Class SMSMessenger
         '
         'Button45
         '
-        Me.Button45.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.Button45.BackColor = System.Drawing.Color.Gainsboro
         Me.Button45.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button45.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button45.Location = New System.Drawing.Point(440, 155)
+        Me.Button45.Location = New System.Drawing.Point(429, 152)
         Me.Button45.Name = "Button45"
         Me.Button45.Size = New System.Drawing.Size(87, 29)
         Me.Button45.TabIndex = 19
@@ -380,11 +383,11 @@ Partial Class SMSMessenger
         '
         'btnPaste
         '
-        Me.btnPaste.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnPaste.BackColor = System.Drawing.Color.Gainsboro
         Me.btnPaste.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPaste.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPaste.Location = New System.Drawing.Point(533, 155)
+        Me.btnPaste.Location = New System.Drawing.Point(522, 152)
         Me.btnPaste.Name = "btnPaste"
         Me.btnPaste.Size = New System.Drawing.Size(75, 29)
         Me.btnPaste.TabIndex = 18
@@ -393,11 +396,11 @@ Partial Class SMSMessenger
         '
         'btnAlt
         '
-        Me.btnAlt.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnAlt.BackColor = System.Drawing.Color.Gainsboro
         Me.btnAlt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAlt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAlt.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlt.Location = New System.Drawing.Point(161, 155)
+        Me.btnAlt.Location = New System.Drawing.Point(150, 152)
         Me.btnAlt.Name = "btnAlt"
         Me.btnAlt.Size = New System.Drawing.Size(54, 29)
         Me.btnAlt.TabIndex = 17
@@ -406,11 +409,11 @@ Partial Class SMSMessenger
         '
         'Button42
         '
-        Me.Button42.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.Button42.BackColor = System.Drawing.Color.Gainsboro
         Me.Button42.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button42.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button42.Location = New System.Drawing.Point(105, 155)
+        Me.Button42.Location = New System.Drawing.Point(94, 152)
         Me.Button42.Name = "Button42"
         Me.Button42.Size = New System.Drawing.Size(50, 29)
         Me.Button42.TabIndex = 16
@@ -419,11 +422,11 @@ Partial Class SMSMessenger
         '
         'btnCtrl
         '
-        Me.btnCtrl.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnCtrl.BackColor = System.Drawing.Color.Gainsboro
         Me.btnCtrl.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCtrl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCtrl.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCtrl.Location = New System.Drawing.Point(38, 155)
+        Me.btnCtrl.Location = New System.Drawing.Point(27, 152)
         Me.btnCtrl.Name = "btnCtrl"
         Me.btnCtrl.Size = New System.Drawing.Size(61, 29)
         Me.btnCtrl.TabIndex = 15
@@ -432,11 +435,11 @@ Partial Class SMSMessenger
         '
         'btnSpace
         '
-        Me.btnSpace.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnSpace.BackColor = System.Drawing.Color.Gainsboro
         Me.btnSpace.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpace.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpace.Location = New System.Drawing.Point(220, 155)
+        Me.btnSpace.Location = New System.Drawing.Point(209, 152)
         Me.btnSpace.Name = "btnSpace"
         Me.btnSpace.Size = New System.Drawing.Size(215, 29)
         Me.btnSpace.TabIndex = 14
@@ -445,11 +448,11 @@ Partial Class SMSMessenger
         '
         'btnRShift
         '
-        Me.btnRShift.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnRShift.BackColor = System.Drawing.Color.Gainsboro
         Me.btnRShift.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRShift.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRShift.Location = New System.Drawing.Point(500, 120)
+        Me.btnRShift.Location = New System.Drawing.Point(489, 117)
         Me.btnRShift.Name = "btnRShift"
         Me.btnRShift.Size = New System.Drawing.Size(108, 29)
         Me.btnRShift.TabIndex = 13
@@ -462,7 +465,7 @@ Partial Class SMSMessenger
         Me.btnSpec7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec7.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec7.Location = New System.Drawing.Point(511, 85)
+        Me.btnSpec7.Location = New System.Drawing.Point(500, 82)
         Me.btnSpec7.Name = "btnSpec7"
         Me.btnSpec7.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec7.TabIndex = 12
@@ -475,7 +478,7 @@ Partial Class SMSMessenger
         Me.btnSpec4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec4.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec4.Location = New System.Drawing.Point(465, 120)
+        Me.btnSpec4.Location = New System.Drawing.Point(454, 117)
         Me.btnSpec4.Name = "btnSpec4"
         Me.btnSpec4.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec4.TabIndex = 12
@@ -488,7 +491,7 @@ Partial Class SMSMessenger
         Me.btnSpec10.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec10.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec10.Location = New System.Drawing.Point(500, 50)
+        Me.btnSpec10.Location = New System.Drawing.Point(489, 47)
         Me.btnSpec10.Name = "btnSpec10"
         Me.btnSpec10.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec10.TabIndex = 12
@@ -501,7 +504,7 @@ Partial Class SMSMessenger
         Me.btnSpec6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec6.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec6.Location = New System.Drawing.Point(476, 85)
+        Me.btnSpec6.Location = New System.Drawing.Point(465, 82)
         Me.btnSpec6.Name = "btnSpec6"
         Me.btnSpec6.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec6.TabIndex = 11
@@ -514,7 +517,7 @@ Partial Class SMSMessenger
         Me.btnSpec3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec3.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec3.Location = New System.Drawing.Point(430, 120)
+        Me.btnSpec3.Location = New System.Drawing.Point(419, 117)
         Me.btnSpec3.Name = "btnSpec3"
         Me.btnSpec3.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec3.TabIndex = 11
@@ -527,7 +530,7 @@ Partial Class SMSMessenger
         Me.btnSpec9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec9.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec9.Location = New System.Drawing.Point(465, 50)
+        Me.btnSpec9.Location = New System.Drawing.Point(454, 47)
         Me.btnSpec9.Name = "btnSpec9"
         Me.btnSpec9.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec9.TabIndex = 11
@@ -536,11 +539,11 @@ Partial Class SMSMessenger
         '
         'btnCaps
         '
-        Me.btnCaps.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnCaps.BackColor = System.Drawing.Color.Gainsboro
         Me.btnCaps.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCaps.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCaps.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCaps.Location = New System.Drawing.Point(38, 85)
+        Me.btnCaps.Location = New System.Drawing.Point(27, 82)
         Me.btnCaps.Name = "btnCaps"
         Me.btnCaps.Size = New System.Drawing.Size(82, 29)
         Me.btnCaps.TabIndex = 10
@@ -553,7 +556,7 @@ Partial Class SMSMessenger
         Me.btnSpec5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec5.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec5.Location = New System.Drawing.Point(441, 85)
+        Me.btnSpec5.Location = New System.Drawing.Point(430, 82)
         Me.btnSpec5.Name = "btnSpec5"
         Me.btnSpec5.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec5.TabIndex = 9
@@ -562,11 +565,11 @@ Partial Class SMSMessenger
         '
         'btnShift
         '
-        Me.btnShift.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnShift.BackColor = System.Drawing.Color.Gainsboro
         Me.btnShift.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnShift.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShift.Location = New System.Drawing.Point(38, 120)
+        Me.btnShift.Location = New System.Drawing.Point(27, 117)
         Me.btnShift.Name = "btnShift"
         Me.btnShift.Size = New System.Drawing.Size(71, 29)
         Me.btnShift.TabIndex = 10
@@ -575,11 +578,11 @@ Partial Class SMSMessenger
         '
         'btnTab
         '
-        Me.btnTab.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.btnTab.BackColor = System.Drawing.Color.Gainsboro
         Me.btnTab.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTab.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTab.Location = New System.Drawing.Point(38, 50)
+        Me.btnTab.Location = New System.Drawing.Point(27, 47)
         Me.btnTab.Name = "btnTab"
         Me.btnTab.Size = New System.Drawing.Size(71, 29)
         Me.btnTab.TabIndex = 10
@@ -592,7 +595,7 @@ Partial Class SMSMessenger
         Me.btnSpec2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec2.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec2.Location = New System.Drawing.Point(395, 120)
+        Me.btnSpec2.Location = New System.Drawing.Point(384, 117)
         Me.btnSpec2.Name = "btnSpec2"
         Me.btnSpec2.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec2.TabIndex = 9
@@ -605,7 +608,7 @@ Partial Class SMSMessenger
         Me.btnL.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnL.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnL.Location = New System.Drawing.Point(406, 85)
+        Me.btnL.Location = New System.Drawing.Point(395, 82)
         Me.btnL.Name = "btnL"
         Me.btnL.Size = New System.Drawing.Size(29, 29)
         Me.btnL.TabIndex = 8
@@ -618,7 +621,7 @@ Partial Class SMSMessenger
         Me.btnP.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnP.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnP.Location = New System.Drawing.Point(430, 50)
+        Me.btnP.Location = New System.Drawing.Point(419, 47)
         Me.btnP.Name = "btnP"
         Me.btnP.Size = New System.Drawing.Size(29, 29)
         Me.btnP.TabIndex = 9
@@ -631,7 +634,7 @@ Partial Class SMSMessenger
         Me.btnM.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnM.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnM.Location = New System.Drawing.Point(360, 120)
+        Me.btnM.Location = New System.Drawing.Point(349, 117)
         Me.btnM.Name = "btnM"
         Me.btnM.Size = New System.Drawing.Size(29, 29)
         Me.btnM.TabIndex = 8
@@ -644,7 +647,7 @@ Partial Class SMSMessenger
         Me.btnK.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnK.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnK.Location = New System.Drawing.Point(371, 85)
+        Me.btnK.Location = New System.Drawing.Point(360, 82)
         Me.btnK.Name = "btnK"
         Me.btnK.Size = New System.Drawing.Size(29, 29)
         Me.btnK.TabIndex = 7
@@ -657,7 +660,7 @@ Partial Class SMSMessenger
         Me.btnO.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnO.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnO.Location = New System.Drawing.Point(395, 50)
+        Me.btnO.Location = New System.Drawing.Point(384, 47)
         Me.btnO.Name = "btnO"
         Me.btnO.Size = New System.Drawing.Size(29, 29)
         Me.btnO.TabIndex = 8
@@ -670,7 +673,7 @@ Partial Class SMSMessenger
         Me.btnN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnN.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnN.Location = New System.Drawing.Point(325, 120)
+        Me.btnN.Location = New System.Drawing.Point(314, 117)
         Me.btnN.Name = "btnN"
         Me.btnN.Size = New System.Drawing.Size(29, 29)
         Me.btnN.TabIndex = 7
@@ -683,7 +686,7 @@ Partial Class SMSMessenger
         Me.btnJ.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnJ.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJ.Location = New System.Drawing.Point(336, 85)
+        Me.btnJ.Location = New System.Drawing.Point(325, 82)
         Me.btnJ.Name = "btnJ"
         Me.btnJ.Size = New System.Drawing.Size(29, 29)
         Me.btnJ.TabIndex = 6
@@ -696,7 +699,7 @@ Partial Class SMSMessenger
         Me.btnI.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnI.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnI.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnI.Location = New System.Drawing.Point(360, 50)
+        Me.btnI.Location = New System.Drawing.Point(349, 47)
         Me.btnI.Name = "btnI"
         Me.btnI.Size = New System.Drawing.Size(29, 29)
         Me.btnI.TabIndex = 7
@@ -709,7 +712,7 @@ Partial Class SMSMessenger
         Me.btnH.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnH.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnH.Location = New System.Drawing.Point(301, 85)
+        Me.btnH.Location = New System.Drawing.Point(290, 82)
         Me.btnH.Name = "btnH"
         Me.btnH.Size = New System.Drawing.Size(29, 29)
         Me.btnH.TabIndex = 5
@@ -722,7 +725,7 @@ Partial Class SMSMessenger
         Me.btnU.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnU.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnU.Location = New System.Drawing.Point(325, 50)
+        Me.btnU.Location = New System.Drawing.Point(314, 47)
         Me.btnU.Name = "btnU"
         Me.btnU.Size = New System.Drawing.Size(29, 29)
         Me.btnU.TabIndex = 6
@@ -735,7 +738,7 @@ Partial Class SMSMessenger
         Me.btnB.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnB.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnB.Location = New System.Drawing.Point(290, 120)
+        Me.btnB.Location = New System.Drawing.Point(279, 117)
         Me.btnB.Name = "btnB"
         Me.btnB.Size = New System.Drawing.Size(29, 29)
         Me.btnB.TabIndex = 5
@@ -748,7 +751,7 @@ Partial Class SMSMessenger
         Me.btnG.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnG.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnG.Location = New System.Drawing.Point(266, 85)
+        Me.btnG.Location = New System.Drawing.Point(255, 82)
         Me.btnG.Name = "btnG"
         Me.btnG.Size = New System.Drawing.Size(29, 29)
         Me.btnG.TabIndex = 4
@@ -761,7 +764,7 @@ Partial Class SMSMessenger
         Me.btnY.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnY.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnY.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnY.Location = New System.Drawing.Point(290, 50)
+        Me.btnY.Location = New System.Drawing.Point(279, 47)
         Me.btnY.Name = "btnY"
         Me.btnY.Size = New System.Drawing.Size(29, 29)
         Me.btnY.TabIndex = 5
@@ -774,7 +777,7 @@ Partial Class SMSMessenger
         Me.btnV.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnV.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnV.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnV.Location = New System.Drawing.Point(255, 120)
+        Me.btnV.Location = New System.Drawing.Point(244, 117)
         Me.btnV.Name = "btnV"
         Me.btnV.Size = New System.Drawing.Size(29, 29)
         Me.btnV.TabIndex = 4
@@ -787,7 +790,7 @@ Partial Class SMSMessenger
         Me.btnF.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnF.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnF.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnF.Location = New System.Drawing.Point(231, 85)
+        Me.btnF.Location = New System.Drawing.Point(220, 82)
         Me.btnF.Name = "btnF"
         Me.btnF.Size = New System.Drawing.Size(29, 29)
         Me.btnF.TabIndex = 3
@@ -800,7 +803,7 @@ Partial Class SMSMessenger
         Me.btnT.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnT.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnT.Location = New System.Drawing.Point(255, 50)
+        Me.btnT.Location = New System.Drawing.Point(244, 47)
         Me.btnT.Name = "btnT"
         Me.btnT.Size = New System.Drawing.Size(29, 29)
         Me.btnT.TabIndex = 4
@@ -813,7 +816,7 @@ Partial Class SMSMessenger
         Me.btnC.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnC.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnC.Location = New System.Drawing.Point(220, 120)
+        Me.btnC.Location = New System.Drawing.Point(209, 117)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(29, 29)
         Me.btnC.TabIndex = 3
@@ -826,7 +829,7 @@ Partial Class SMSMessenger
         Me.btnD.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnD.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnD.Location = New System.Drawing.Point(196, 85)
+        Me.btnD.Location = New System.Drawing.Point(185, 82)
         Me.btnD.Name = "btnD"
         Me.btnD.Size = New System.Drawing.Size(29, 29)
         Me.btnD.TabIndex = 2
@@ -839,7 +842,7 @@ Partial Class SMSMessenger
         Me.btnR.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnR.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnR.Location = New System.Drawing.Point(220, 50)
+        Me.btnR.Location = New System.Drawing.Point(209, 47)
         Me.btnR.Name = "btnR"
         Me.btnR.Size = New System.Drawing.Size(29, 29)
         Me.btnR.TabIndex = 3
@@ -852,7 +855,7 @@ Partial Class SMSMessenger
         Me.btnX.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnX.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnX.Location = New System.Drawing.Point(185, 120)
+        Me.btnX.Location = New System.Drawing.Point(174, 117)
         Me.btnX.Name = "btnX"
         Me.btnX.Size = New System.Drawing.Size(29, 29)
         Me.btnX.TabIndex = 2
@@ -865,7 +868,7 @@ Partial Class SMSMessenger
         Me.btnS.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnS.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnS.Location = New System.Drawing.Point(161, 85)
+        Me.btnS.Location = New System.Drawing.Point(150, 82)
         Me.btnS.Name = "btnS"
         Me.btnS.Size = New System.Drawing.Size(29, 29)
         Me.btnS.TabIndex = 1
@@ -878,7 +881,7 @@ Partial Class SMSMessenger
         Me.btnE.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnE.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnE.Location = New System.Drawing.Point(185, 50)
+        Me.btnE.Location = New System.Drawing.Point(174, 47)
         Me.btnE.Name = "btnE"
         Me.btnE.Size = New System.Drawing.Size(29, 29)
         Me.btnE.TabIndex = 2
@@ -891,7 +894,7 @@ Partial Class SMSMessenger
         Me.btnZ.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnZ.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnZ.Location = New System.Drawing.Point(150, 120)
+        Me.btnZ.Location = New System.Drawing.Point(139, 117)
         Me.btnZ.Name = "btnZ"
         Me.btnZ.Size = New System.Drawing.Size(29, 29)
         Me.btnZ.TabIndex = 1
@@ -904,7 +907,7 @@ Partial Class SMSMessenger
         Me.btnA.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnA.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnA.Location = New System.Drawing.Point(126, 85)
+        Me.btnA.Location = New System.Drawing.Point(115, 82)
         Me.btnA.Name = "btnA"
         Me.btnA.Size = New System.Drawing.Size(29, 29)
         Me.btnA.TabIndex = 0
@@ -917,7 +920,7 @@ Partial Class SMSMessenger
         Me.btnSpec1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSpec1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpec1.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec1.Location = New System.Drawing.Point(115, 120)
+        Me.btnSpec1.Location = New System.Drawing.Point(104, 117)
         Me.btnSpec1.Name = "btnSpec1"
         Me.btnSpec1.Size = New System.Drawing.Size(29, 29)
         Me.btnSpec1.TabIndex = 0
@@ -930,7 +933,7 @@ Partial Class SMSMessenger
         Me.btnW.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnW.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnW.Location = New System.Drawing.Point(150, 50)
+        Me.btnW.Location = New System.Drawing.Point(139, 47)
         Me.btnW.Name = "btnW"
         Me.btnW.Size = New System.Drawing.Size(29, 29)
         Me.btnW.TabIndex = 1
@@ -943,7 +946,7 @@ Partial Class SMSMessenger
         Me.btnQ.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnQ.Font = New System.Drawing.Font("Courier New", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnQ.Location = New System.Drawing.Point(115, 50)
+        Me.btnQ.Location = New System.Drawing.Point(104, 47)
         Me.btnQ.Name = "btnQ"
         Me.btnQ.Size = New System.Drawing.Size(29, 29)
         Me.btnQ.TabIndex = 0
@@ -952,16 +955,16 @@ Partial Class SMSMessenger
         '
         'textDisplay
         '
-        Me.textDisplay.Location = New System.Drawing.Point(0, 31)
+        Me.textDisplay.Location = New System.Drawing.Point(12, 38)
         Me.textDisplay.Name = "textDisplay"
-        Me.textDisplay.Size = New System.Drawing.Size(640, 183)
+        Me.textDisplay.Size = New System.Drawing.Size(616, 176)
         Me.textDisplay.TabIndex = 1
         '
         'txtMessage
         '
         Me.txtMessage.AcceptsReturn = True
         Me.txtMessage.AcceptsTab = True
-        Me.txtMessage.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.txtMessage.BackColor = System.Drawing.Color.Gainsboro
         Me.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMessage.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMessage.Location = New System.Drawing.Point(37, 219)
@@ -972,21 +975,41 @@ Partial Class SMSMessenger
         Me.txtMessage.Size = New System.Drawing.Size(569, 61)
         Me.txtMessage.TabIndex = 1
         '
-        'Panel2
+        'Bar1
         '
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(640, 25)
-        Me.Panel2.TabIndex = 2
+        Me.Bar1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Bar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Bar1.Controls.Add(Me.cmdClose)
+        Me.Bar1.Location = New System.Drawing.Point(0, 0)
+        Me.Bar1.Name = "Bar1"
+        Me.Bar1.Size = New System.Drawing.Size(640, 32)
+        Me.Bar1.TabIndex = 3
+        '
+        'cmdClose
+        '
+        Me.cmdClose.BackColor = System.Drawing.Color.Transparent
+        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
+        Me.cmdClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdClose.FlatAppearance.BorderSize = 0
+        Me.cmdClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.cmdClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdClose.Location = New System.Drawing.Point(607, 0)
+        Me.cmdClose.Name = "cmdClose"
+        Me.cmdClose.Size = New System.Drawing.Size(32, 32)
+        Me.cmdClose.TabIndex = 2
+        Me.cmdClose.UseVisualStyleBackColor = False
         '
         'SMSMessenger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.TextInputExample.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(640, 480)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.txtMessage)
         Me.Controls.Add(Me.textDisplay)
         Me.Controls.Add(Me.Panel1)
@@ -994,6 +1017,7 @@ Partial Class SMSMessenger
         Me.Name = "SMSMessenger"
         Me.Text = "SMS Messenger"
         Me.Panel1.ResumeLayout(False)
+        Me.Bar1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1062,6 +1086,7 @@ Partial Class SMSMessenger
     Friend WithEvents btnEnter As System.Windows.Forms.Button
     Friend WithEvents textDisplay As System.Windows.Forms.Panel
     Friend WithEvents txtMessage As System.Windows.Forms.TextBox
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents cmdClose As System.Windows.Forms.Button
+    Friend WithEvents Bar1 As System.Windows.Forms.Panel
 
 End Class
